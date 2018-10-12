@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="note,markdown," />
+  <meta name="keywords" content="python,爬虫," />
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="sillysblog这个下面就没有横线呢sillycrane这个呢，看来大于一个=效果和上面一样呢">
-<meta name="keywords" content="note,markdown">
+<meta name="description" content="开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。   应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了   另外还学到了关于获取参数以及深化了对request库的理解">
+<meta name="keywords" content="python,爬虫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown-note">
-<meta property="og:url" content="http://yoursite.com/2018/10/11/markdown-note/index.html">
+<meta property="og:title" content="自写小爬虫爬取百度关键词域名">
+<meta property="og:url" content="http://yoursite.com/2018/10/12/自写小爬虫爬取百度关键词域名/index.html">
 <meta property="og:site_name" content="SILLYCRANE">
-<meta property="og:description" content="sillysblog这个下面就没有横线呢sillycrane这个呢，看来大于一个=效果和上面一样呢">
+<meta property="og:description" content="开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。   应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了   另外还学到了关于获取参数以及深化了对request库的理解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png">
-<meta property="og:image" content="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png">
-<meta property="og:updated_time" content="2018-10-11T14:21:18.226Z">
+<meta property="og:updated_time" content="2018-10-12T09:39:23.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown-note">
-<meta name="twitter:description" content="sillysblog这个下面就没有横线呢sillycrane这个呢，看来大于一个=效果和上面一样呢">
-<meta name="twitter:image" content="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png">
+<meta name="twitter:title" content="自写小爬虫爬取百度关键词域名">
+<meta name="twitter:description" content="开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。   应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了   另外还学到了关于获取参数以及深化了对request库的理解">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/11/markdown-note/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/12/自写小爬虫爬取百度关键词域名/"/>
 
 
 
 
 
-  <title>markdown-note | SILLYCRANE</title>
+  <title>自写小爬虫爬取百度关键词域名 | SILLYCRANE</title>
   
 
 
@@ -266,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/11/markdown-note/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/12/自写小爬虫爬取百度关键词域名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sillycrane">
@@ -283,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">markdown-note</h1>
+          <h1 class="post-title" itemprop="name headline">自写小爬虫爬取百度关键词域名</h1>
         
 
         <div class="post-meta">
@@ -295,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-11T21:28:37+08:00">
-                2018-10-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-12T16:39:48+08:00">
+                2018-10-12
               </time>
             
 
@@ -355,56 +352,73 @@
       
 
       
-        <h1 id="sillysblog这个下面就没有横线呢"><a href="#sillysblog这个下面就没有横线呢" class="headerlink" title="sillysblog这个下面就没有横线呢"></a>sillysblog这个下面就没有横线呢</h1><h1 id="sillycrane这个呢，看来大于一个-效果和上面一样呢"><a href="#sillycrane这个呢，看来大于一个-效果和上面一样呢" class="headerlink" title="sillycrane这个呢，看来大于一个=效果和上面一样呢"></a>sillycrane这个呢，看来大于一个=效果和上面一样呢</h1><a id="more"></a>
-<h2 id="sillycrane为啥子一个-就没问题，两个-还附送一个横线在下面"><a href="#sillycrane为啥子一个-就没问题，两个-还附送一个横线在下面" class="headerlink" title="sillycrane为啥子一个#就没问题，两个#还附送一个横线在下面"></a>sillycrane为啥子一个#就没问题，两个#还附送一个横线在下面</h2><h3 id="sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别"><a href="#sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别" class="headerlink" title="sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别"></a>sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别</h3><pre><code>开始按个tab键可以让文本换个背景？？
-</code></pre><p>我试试换行呢<br><br>好像后面加上两个空格也可以换行<br>确实可以哈哈</p>
-<p><code>听说这个好像可以高亮，感觉就是代码模式啊，哪里高亮了</code><br><br></p>
-<p><a href="http://1127.74.53.113" title="这里面好像是可以悬停什么东西的" target="_blank" rel="noopener">silly’s blog</a><br><br></p>
-<ul>
-<li>这个好像是什么无序排列的</li>
-</ul>
-<ul>
-<li>这个和上面那个效果一样。。。<ul>
-<li>这个好像就是二级的无序<ul>
-<li>这个是三级，有点骚啊</li>
-</ul>
+        <ul>
+<li>开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。  </li>
+<li>应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了  </li>
+<li>另外还学到了关于获取参数以及深化了对request库的理解<a id="more"></a>  
 </li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<p>听说好像这个是一级缩进。。。</p>
-<blockquote>
-<p>这就成二级缩进了。。。</p>
-<blockquote>
-<p>还有三级？</p>
-<blockquote>
-<p>存不存在四级</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><img src="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png" alt="为啥子这里输入的文字看不到呢" title="这里也可以悬停点什么东西在这儿"></p>
-<p><a href="http://112.74.53.113/" target="_blank" rel="noopener"><img src="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png" alt="外面套一个大圈圈还可以加上链接" title="指向我自己的博客吧"></a></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line"><span class="keyword">echo</span> $_GET[<span class="string">'id'</span>];   </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>这个好像能加粗</strong><br><br><strong>这个好像也能加粗</strong><br><br><em>斜体这个也太斜了吧</em><br><br><em>这个也是斜体</em><br><br><strong><em>这特么就是粗斜体</em></strong><br><br><del>这是删除线</del><br></p>
-<table>
-<thead>
-<tr>
-<th>名字</th>
-<th style="text-align:center">性别</th>
-<th style="text-align:right">年龄</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>王皮</td>
-<td style="text-align:center">男</td>
-<td style="text-align:right">19</td>
-</tr>
-</tbody>
-</table>
-<hr>
+<pre><code class="python"><span class="comment"># -*- coding: utf-8 -*-</span>
+
+<span class="keyword">import</span> requests
+<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup
+<span class="keyword">import</span> getopt,sys
+<span class="keyword">import</span> lxml
+<span class="keyword">import</span> urllib
+&lt;--more--&gt;
+<span class="function"><span class="keyword">def</span> <span class="title">print_help</span><span class="params">()</span>:</span>
+    print(<span class="string">"\tusage:catchurl.py -k &lt;keywords&gt; -d &lt;down&gt; -u &lt;up&gt; -o &lt;filename&gt;"</span>)
+    print(<span class="string">"\tusage:catchurl.py --key &lt;keywords&gt; --down &lt;down&gt; --up &lt;up&gt; --outfile &lt;filename&gt;"</span>)
+
+
+<span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(argv)</span>:</span>
+    <span class="keyword">try</span>:
+        opts, args = getopt.getopt(argv, <span class="string">"hk:d:u:o:"</span>, [<span class="string">"key="</span>, <span class="string">"num="</span>,<span class="string">"down="</span>,<span class="string">"up="</span>,<span class="string">"outfile="</span>])
+    <span class="keyword">except</span> getopt.GetoptError:
+        print_help()
+        sys.exit()
+    <span class="keyword">for</span> opt,arg <span class="keyword">in</span> opts:
+        <span class="keyword">if</span> opt == <span class="string">'-h'</span>:
+            print_help()
+            sys.exit()
+        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-k'</span>,<span class="string">'--key'</span>):
+            key = arg
+        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-o'</span>,<span class="string">'--outfile'</span>):
+            outfile = arg
+        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-d'</span>, <span class="string">'--down'</span>):
+            down = arg
+        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-u'</span>, <span class="string">'--up'</span>):
+            up = arg
+    print(<span class="string">"---start---"</span>)
+    headers = {<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'</span>}
+    file=open(outfile,<span class="string">"w+"</span>)
+    all=[]
+    <span class="keyword">for</span> page <span class="keyword">in</span> range(int(down),int(up),<span class="number">10</span>):
+        <span class="comment">#intitle:powered by dedecms</span>
+        inurl=<span class="string">"https://www.baidu.com/s?wd="</span>+key+<span class="string">"&amp;pn="</span>+str(page)
+        res = requests.get(url = inurl,headers=headers)
+        print(<span class="string">"[*]"</span>+res.url)
+        soup = BeautifulSoup(res.content,<span class="string">'lxml'</span>)
+        tagh3 = soup.find_all(<span class="string">'h3'</span>)
+        <span class="keyword">for</span> h3 <span class="keyword">in</span> tagh3:
+            href = h3.find(<span class="string">'a'</span>).get(<span class="string">'href'</span>)
+            baidu_url = requests.get(url=href, headers=headers, allow_redirects=<span class="keyword">False</span>)
+            real_url = baidu_url.headers[<span class="string">'Location'</span>]
+            <span class="keyword">if</span> real_url.startswith(<span class="string">'http'</span>):
+                pro,url=urllib.splittype(real_url)
+                host,rest=urllib.splithost(url)
+                final=pro+<span class="string">"://"</span>+host
+                <span class="keyword">if</span> final <span class="keyword">not</span> <span class="keyword">in</span> all:
+                    all.append(final)
+                    print(<span class="string">' [+]'</span> + final)
+                    file.write(final+<span class="string">'\n'</span>)
+
+<span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:
+    main(sys.argv[<span class="number">1</span>:])
+    print(<span class="string">"---end---"</span>)
+
+</code></pre>
+<p>结束，写个这个玩意还是学到很多东西的</p>
 
       
     </div>
@@ -422,9 +436,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/note/" rel="tag"># note</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
+            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
           
         </div>
       
@@ -437,14 +451,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/11/markdown-note/" rel="next" title="markdown-note">
+                <i class="fa fa-chevron-left"></i> markdown-note
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/12/自写小爬虫爬取百度关键词域名/" rel="prev" title="自写小爬虫爬取百度关键词域名">
-                自写小爬虫爬取百度关键词域名 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/12/代码审计学习/" rel="prev" title="代码审计学习">
+                代码审计学习 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -497,17 +515,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -571,22 +580,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sillysblog这个下面就没有横线呢"><span class="nav-number">1.</span> <span class="nav-text">sillysblog这个下面就没有横线呢</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sillycrane这个呢，看来大于一个-效果和上面一样呢"><span class="nav-number">2.</span> <span class="nav-text">sillycrane这个呢，看来大于一个=效果和上面一样呢</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sillycrane为啥子一个-就没问题，两个-还附送一个横线在下面"><span class="nav-number">2.1.</span> <span class="nav-text">sillycrane为啥子一个#就没问题，两个#还附送一个横线在下面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别"><span class="nav-number">2.1.1.</span> <span class="nav-text">sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
