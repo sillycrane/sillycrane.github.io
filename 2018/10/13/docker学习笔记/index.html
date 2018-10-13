@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,爬虫," />
+  <meta name="keywords" content="note,docker," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。   应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了   另外还学到了关于获取参数以及深化了对request库的理解">
-<meta name="keywords" content="python,爬虫">
+<meta name="description" content="安装docker添加源并更新 /etc/apt/sources.list添加deb http://http.debian.net/debian jessie-backports main运行sudo apt-get update">
+<meta name="keywords" content="note,docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自写小爬虫爬取百度关键词域名">
-<meta property="og:url" content="http://yoursite.com/2018/10/12/自写小爬虫爬取百度关键词域名/index.html">
+<meta property="og:title" content="docker学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/10/13/docker学习笔记/index.html">
 <meta property="og:site_name" content="SILLYCRANE">
-<meta property="og:description" content="开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。   应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了   另外还学到了关于获取参数以及深化了对request库的理解">
+<meta property="og:description" content="安装docker添加源并更新 /etc/apt/sources.list添加deb http://http.debian.net/debian jessie-backports main运行sudo apt-get update">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-12T09:39:23.907Z">
+<meta property="og:updated_time" content="2018-10-13T11:02:01.943Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自写小爬虫爬取百度关键词域名">
-<meta name="twitter:description" content="开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。   应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了   另外还学到了关于获取参数以及深化了对request库的理解">
+<meta name="twitter:title" content="docker学习笔记">
+<meta name="twitter:description" content="安装docker添加源并更新 /etc/apt/sources.list添加deb http://http.debian.net/debian jessie-backports main运行sudo apt-get update">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/12/自写小爬虫爬取百度关键词域名/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/13/docker学习笔记/"/>
 
 
 
 
 
-  <title>自写小爬虫爬取百度关键词域名 | SILLYCRANE</title>
+  <title>docker学习笔记 | SILLYCRANE</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/12/自写小爬虫爬取百度关键词域名/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/13/docker学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sillycrane">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">自写小爬虫爬取百度关键词域名</h1>
+          <h1 class="post-title" itemprop="name headline">docker学习笔记</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-12T16:39:48+08:00">
-                2018-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-13T14:46:26+08:00">
+                2018-10-13
               </time>
             
 
@@ -352,73 +352,59 @@
       
 
       
-        <ul>
-<li>开始，写错了几次，最后还是一边百度一边写好了，从百度结果界面获取url是不完整的，甚至有可能出错。  </li>
-<li>应该从一个h3的标签里面获取a标签的href内容，访问这个地址然后在提取request请求的location就是目标网站了  </li>
-<li>另外还学到了关于获取参数以及深化了对request库的理解<a id="more"></a>  
-</li>
-</ul>
-<pre><code class="python"><span class="comment"># -*- coding: utf-8 -*-</span>
-
-<span class="keyword">import</span> requests
-<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup
-<span class="keyword">import</span> getopt,sys
-<span class="keyword">import</span> lxml
-<span class="keyword">import</span> urllib
-&lt;--more--&gt;
-<span class="function"><span class="keyword">def</span> <span class="title">print_help</span><span class="params">()</span>:</span>
-    print(<span class="string">"\tusage:catchurl.py -k &lt;keywords&gt; -d &lt;down&gt; -u &lt;up&gt; -o &lt;filename&gt;"</span>)
-    print(<span class="string">"\tusage:catchurl.py --key &lt;keywords&gt; --down &lt;down&gt; --up &lt;up&gt; --outfile &lt;filename&gt;"</span>)
-
-
-<span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(argv)</span>:</span>
-    <span class="keyword">try</span>:
-        opts, args = getopt.getopt(argv, <span class="string">"hk:d:u:o:"</span>, [<span class="string">"key="</span>, <span class="string">"num="</span>,<span class="string">"down="</span>,<span class="string">"up="</span>,<span class="string">"outfile="</span>])
-    <span class="keyword">except</span> getopt.GetoptError:
-        print_help()
-        sys.exit()
-    <span class="keyword">for</span> opt,arg <span class="keyword">in</span> opts:
-        <span class="keyword">if</span> opt == <span class="string">'-h'</span>:
-            print_help()
-            sys.exit()
-        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-k'</span>,<span class="string">'--key'</span>):
-            key = arg
-        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-o'</span>,<span class="string">'--outfile'</span>):
-            outfile = arg
-        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-d'</span>, <span class="string">'--down'</span>):
-            down = arg
-        <span class="keyword">elif</span> opt <span class="keyword">in</span> (<span class="string">'-u'</span>, <span class="string">'--up'</span>):
-            up = arg
-    print(<span class="string">"---start---"</span>)
-    headers = {<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0'</span>}
-    file=open(outfile,<span class="string">"w+"</span>)
-    all=[]
-    <span class="keyword">for</span> page <span class="keyword">in</span> range(int(down),int(up),<span class="number">10</span>):
-        <span class="comment">#intitle:powered by dedecms</span>
-        inurl=<span class="string">"https://www.baidu.com/s?wd="</span>+key+<span class="string">"&amp;pn="</span>+str(page)
-        res = requests.get(url = inurl,headers=headers)
-        print(<span class="string">"[*]"</span>+res.url)
-        soup = BeautifulSoup(res.content,<span class="string">'lxml'</span>)
-        tagh3 = soup.find_all(<span class="string">'h3'</span>)
-        <span class="keyword">for</span> h3 <span class="keyword">in</span> tagh3:
-            href = h3.find(<span class="string">'a'</span>).get(<span class="string">'href'</span>)
-            baidu_url = requests.get(url=href, headers=headers, allow_redirects=<span class="keyword">False</span>)
-            real_url = baidu_url.headers[<span class="string">'Location'</span>]
-            <span class="keyword">if</span> real_url.startswith(<span class="string">'http'</span>):
-                pro,url=urllib.splittype(real_url)
-                host,rest=urllib.splithost(url)
-                final=pro+<span class="string">"://"</span>+host
-                <span class="keyword">if</span> final <span class="keyword">not</span> <span class="keyword">in</span> all:
-                    all.append(final)
-                    print(<span class="string">' [+]'</span> + final)
-                    file.write(final+<span class="string">'\n'</span>)
-
-<span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:
-    main(sys.argv[<span class="number">1</span>:])
-    print(<span class="string">"---end---"</span>)
-
-</code></pre>
-<p>结束，写个这个玩意还是学到很多东西的</p>
+        <h1 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h1><h2 id="添加源并更新"><a href="#添加源并更新" class="headerlink" title="添加源并更新"></a>添加源并更新</h2><blockquote>
+<p>/etc/apt/sources.list添加<br><code>deb http://http.debian.net/debian jessie-backports main</code><br>运行<code>sudo apt-get update</code>  </p>
+</blockquote>
+<a id="more"></a>  
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p><code>apt-get install docker.io</code>  </p>
+</blockquote>
+<h2 id="查看是否安装成功"><a href="#查看是否安装成功" class="headerlink" title="查看是否安装成功"></a>查看是否安装成功</h2><blockquote>
+<p><code>docker versions</code></p>
+</blockquote>
+<hr>
+<h1 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h1><blockquote>
+<p><a href="https://hub.docker.com" title="跳转dockerhub" target="_blank" rel="noopener">dockerhub</a>官网<br><a href="http://dashboard.daocloud.io" title="跳转daocloud" target="_blank" rel="noopener">daocloud</a>挑选镜像并下载<br>删除镜像<br><code>docker rmi IMAGE:TAG</code><br><code>docker rmi IMAGEID</code></p>
+</blockquote>
+<hr>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="运行一个容器打印helloworld"><a href="#运行一个容器打印helloworld" class="headerlink" title="运行一个容器打印helloworld"></a>运行一个容器打印helloworld</h2><blockquote>
+<p><code>docker run IMAGE echo &#39;helloworld&#39;</code>  </p>
+</blockquote>
+<h2 id="启动一个交互式容器名叫cli1"><a href="#启动一个交互式容器名叫cli1" class="headerlink" title="启动一个交互式容器名叫cli1"></a>启动一个交互式容器名叫cli1</h2><blockquote>
+<p><code>docker run [--name=cl1] -i -t IMAGE /bin/bash</code></p>
+</blockquote>
+<h2 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h2><blockquote>
+<p><code>docker ps [-a] [-l]</code></p>
+<blockquote>
+<p>-a显示所有<br>-l显示最新    </p>
+</blockquote>
+</blockquote>
+<h2 id="查看容器配置"><a href="#查看容器配置" class="headerlink" title="查看容器配置"></a>查看容器配置</h2><blockquote>
+<p><code>docker inspect 容器名</code></p>
+</blockquote>
+<h2 id="重启一个容器"><a href="#重启一个容器" class="headerlink" title="重启一个容器"></a>重启一个容器</h2><blockquote>
+<p><code>docker start [-i] 容器名</code></p>
+</blockquote>
+<h2 id="删除一个容器"><a href="#删除一个容器" class="headerlink" title="删除一个容器"></a>删除一个容器</h2><p><code>docker rm 容器名</code></p>
+<h2 id="守护式容器"><a href="#守护式容器" class="headerlink" title="守护式容器"></a>守护式容器</h2><blockquote>
+<p>使用ctrl+p和ctrl+q键退出，使其在后台运行<br>使用以下命令回到守护式容器<br><code>docker attach 容器名</code><br>停止守护式容器<br><code>docker stop 容器名</code>发送停止请求<br><code>docker kill 容器名</code>直接停止容器</p>
+</blockquote>
+<h2 id="查看容器日志"><a href="#查看容器日志" class="headerlink" title="查看容器日志"></a>查看容器日志</h2><blockquote>
+<p><code>docker logs [-f] [-t] [--tail] 容器名</code></p>
+<blockquote>
+<p>-f一直跟踪返回<br>-t显示时间<br>–tail显示数量</p>
+</blockquote>
+</blockquote>
+<h2 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h2><blockquote>
+<p>映射所有端口<br><code>docker run -P -i -t IMAGE /bin/bash</code><br>映射目标端口<br><code>docker run -p 80 -i -t IMAGE /bin/bash</code>将80端口随机映射<br><code>docker run -p 8080：80 -i -t IMAGE /bin/bash</code>将80端口映射到主机的8080端口  </p>
+</blockquote>
+<hr>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="赋权"><a href="#赋权" class="headerlink" title="赋权"></a>赋权</h2><blockquote>
+<p><code>sudo groupadd docker</code><br><code>sudo gpasswd -a 用户名 docker</code><br><code>sudo service docker restart</code></p>
+</blockquote>
+<h2 id="IMAGE储存地址"><a href="#IMAGE储存地址" class="headerlink" title="IMAGE储存地址"></a>IMAGE储存地址</h2><blockquote>
+<p>/var/lib/docker</p>
+</blockquote>
 
       
     </div>
@@ -436,9 +422,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/note/" rel="tag"># note</a>
           
-            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+            <a href="/tags/docker/" rel="tag"># docker</a>
           
         </div>
       
@@ -451,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/11/markdown-note/" rel="next" title="markdown-note">
-                <i class="fa fa-chevron-left"></i> markdown-note
+              <a href="/2018/10/12/CTF笔记/" rel="next" title="CTF笔记">
+                <i class="fa fa-chevron-left"></i> CTF笔记
               </a>
             
           </div>
@@ -460,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/12/代码审计学习/" rel="prev" title="代码审计学习">
-                代码审计学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -515,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -580,6 +571,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装docker"><span class="nav-number">1.</span> <span class="nav-text">安装docker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加源并更新"><span class="nav-number">1.1.</span> <span class="nav-text">添加源并更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看是否安装成功"><span class="nav-number">1.3.</span> <span class="nav-text">查看是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#镜像"><span class="nav-number">2.</span> <span class="nav-text">镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本操作"><span class="nav-number">3.</span> <span class="nav-text">基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行一个容器打印helloworld"><span class="nav-number">3.1.</span> <span class="nav-text">运行一个容器打印helloworld</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动一个交互式容器名叫cli1"><span class="nav-number">3.2.</span> <span class="nav-text">启动一个交互式容器名叫cli1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看容器"><span class="nav-number">3.3.</span> <span class="nav-text">查看容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看容器配置"><span class="nav-number">3.4.</span> <span class="nav-text">查看容器配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启一个容器"><span class="nav-number">3.5.</span> <span class="nav-text">重启一个容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除一个容器"><span class="nav-number">3.6.</span> <span class="nav-text">删除一个容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#守护式容器"><span class="nav-number">3.7.</span> <span class="nav-text">守护式容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看容器日志"><span class="nav-number">3.8.</span> <span class="nav-text">查看容器日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#端口映射"><span class="nav-number">3.9.</span> <span class="nav-text">端口映射</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#赋权"><span class="nav-number">4.1.</span> <span class="nav-text">赋权</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IMAGE储存地址"><span class="nav-number">4.2.</span> <span class="nav-text">IMAGE储存地址</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
