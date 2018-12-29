@@ -259,6 +259,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/29/OOP-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sillycrane">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/0.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SILLYCRANE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/29/OOP-note/" itemprop="url">OOP-note</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-29T23:56:22+08:00">
+                2018-12-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/study/" itemprop="url" rel="index">
+                    <span itemprop="name">study</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><ul>
+<li>自身类的对象是不可以作为该类的成员的  </li>
+<li>类不是C语言的结构类型  </li>
+<li>重载不是面向对象系统包含的要素  </li>
+<li>面向对象程序设计将数据与对数据操作放在一起，作为相互依存、不可分割的整体来处理   </li>
+<li>在面向对象方法中，一个对象请求另一个对象为其服务的方式是通过发送消息  </li>
+<li>在c++语言中，也可以使用struct（结构体）来定义一个类。（结构体默认权限是public） </li>
+<li>在建立数组时，要调用构造函数。如果有50个元素，就需要调用50次构造函数。  </li>
+<li>在建立对象时，编译系统会为每一个对象分配一定的存储空间，以存放其成员。   </li>
+<li>常对象只能调用常成员函数  </li>
+<li>常数据成员只能通过参数初始化表初始化，之后不可另外赋值  </li>
+<li>如果对一个类定义了两个或多个对象，则这些同类的对象之间可以互相赋值  </li>
+<li>如果在函数中定义静态(static )局部对象，则只在程序第一次调用此函数建立对象时调用构造函数一次。  </li>
+</ul>
+<h1 id="类内"><a href="#类内" class="headerlink" title="类内"></a>类内</h1><h2 id="构造析构"><a href="#构造析构" class="headerlink" title="构造析构"></a>构造析构</h2><ul>
+<li>/瑞格6203这道题好像出错了/  </li>
+<li>具有转换函数功能的构造函数，应该是带有一个参数的构造函数  </li>
+<li>调用内嵌对象的构造函数顺序按照内嵌对象在组合类的定义顺序，而非在初始化列表中出现的顺序  </li>
+<li>析构函数名与类名相同（wtf那个~算什么。。。），并且无参无返，一个类中只能定义一个析构函数（必须在类体内定义。。。）  </li>
+<li>析构函数调用与构造函数调用顺序相反  </li>
+<li>在全局范围中定义的对象(即在所有函数之外定义的对象)，它的构造函数在文件中的所有函数(包括main函数)执行之前调用。  </li>
+<li>如果定义的是局部自动对象(例如在函数中定义对象)，则在建立对象时调用其构造函数  </li>
+<li>在C++语言中，如果不自定义类的拷贝构造函数，则每个类都有默认的拷贝构造函数  </li>
+<li>析构函数不能重载  </li>
+<li>构造函数不能是虚函数  <h2 id="静态函数"><a href="#静态函数" class="headerlink" title="静态函数"></a>静态函数</h2></li>
+<li>静态数据成员要在类体外进行初始化  </li>
+<li>引用静态数据成员时，要在静态数据成员前加&lt;类名*  和作用域运算符  </li>
+<li>说明静态数据成员时前边要加修饰符static  </li>
+<li>静态成员函数可以直接访问该类的静态数据和成员函数，然而访问非静态成员必须通过对象名（P157）  <h2 id="友元"><a href="#友元" class="headerlink" title="友元"></a>友元</h2></li>
+<li>友元并非类的成员  </li>
+<li>C++不允许将构造函数和析构函数声明为友元函数  </li>
+<li>友元关系声明可以放在类定义中的任何地方  <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2></li>
+<li>派生类把基类全部的成员(不包括构造函数和析构函数)接收过来，也就是说是没有选择的，不能选择接收其中一部分成员，而舍弃另一部分成员  </li>
+<li>多继承情况下,派生类的构造函数中基类构造函数的执行顺序取决于定义派生类时所指定的各基类的顺序。</li>
+<li>在保护继承中,对于派生类的访问同于公有继承,而对于派生类的对象的访问同于私有继承    </li>
+<li>对基类数据成员的初始化必须在派生类构造函数中的参数初始化表处进行  <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2></li>
+<li>多态性是指具有不同功能的函数可以用同一个函数名，这样就可以用一个函数名调用不同内容的函数。  </li>
+<li>静态多态性和动态多态性  </li>
+<li>编译时多态，运行时多态  </li>
+<li>重载多态，强制多态，包含多态，参数多态  </li>
+<li>当类中存在动态内存分配时经常将类的析构函数函数声明成虚函数  </li>
+<li>基类中说明了虚函数后，派生类中与其对应的函数都为虚函数<h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3></li>
+<li>运算符重载不可以改变语法结构  </li>
+<li>运算符重载函数可以是类的成员函数,也可以是类的友元函数,还可以是既非类的成员函数也不是友元函数的普通函数｡  </li>
+<li>只能重载C++中已经有的运算符，不能定义新运算符<h3 id="纯虚函数"><a href="#纯虚函数" class="headerlink" title="纯虚函数"></a>纯虚函数</h3></li>
+<li>如果纯虚函数没有被重载，则派生类将继承此纯虚函数，即该派生类也是抽象类（抽象类不能定义对象）  </li>
+<li></li>
+</ul>
+<h1 id="others"><a href="#others" class="headerlink" title="others"></a>others</h1><ul>
+<li>new关键词（默认情况下等同于malloc）不可以重载(与瑞格6268题好像有点冲突,百度了一哈好像是可以重载的。。。)  <h2 id="背答案系列"><a href="#背答案系列" class="headerlink" title="背答案系列"></a>背答案系列</h2></li>
+<li><code>[],+,(),new</code> 这一组不能全被友元函数重载(未知)  </li>
+<li><code>-&gt;,+,*,&gt;&gt;</code> 这一组不能全被友元函数重载(-&gt;)  </li>
+<li><code>=,+,-,\</code> 这一组不能全被友元函数重载(\)</li>
+<li><code>&lt;&lt;,&gt;&gt;,*,+</code> 这一组能全被友元函数重载  </li>
+<li>下面是重载为非成员函数的运算符函数原型，其中错误的是<code>Fraction&amp; operator+(Fraction&amp;,Fraction)</code>  </li>
+<li><code>声明&quot;class B: virtual public A&quot;说明类B为虚基类</code>这句话是错的  </li>
+<li>用指向基类对象的指针变量指向子类对象是合法的、安全的，不会出现编译上的错误  </li>
+<li>继承是纵向的，组合是横向的  </li>
+<li>虚函数不得是静态成员函数  </li>
+<li>含有纯虚函数的类称为抽象类  </li>
+<li>纯虚函数不能是友元函数  </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/16/xml注入学习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1629,7 +1832,7 @@ control—-控制面板
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1651,7 +1854,7 @@ control—-控制面板
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
