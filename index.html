@@ -497,20 +497,15 @@
 
       
         
-          
-            <h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>使用kali时控制不住手贱使用rm命令，老是误删东西。。。就尝试自己写了一个脚本命令来代替rm命令，个人感觉还是比较好用的</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="删除部分（del）"><a href="#删除部分（del）" class="headerlink" title="删除部分（del）"></a>删除部分（del）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">for arg in "$@"</span><br><span class="line">do</span><br><span class="line">	if [ "$arg" == "clear" ]; then</span><br><span class="line">		echo -e "\033[33m [!!!]clear garbage?\033[0m"</span><br><span class="line">		read -p "only 'Y' for yes:" y</span><br><span class="line">		if [ "$y" == "Y" ]; then</span><br><span class="line">			`rm -rf /root/garbage/*`</span><br><span class="line">			echo -e "\033[32m [*]clear over!\033[0m"</span><br><span class="line">			break;</span><br><span class="line">		else</span><br><span class="line">			break;</span><br><span class="line">		fi</span><br><span class="line">	fi</span><br><span class="line">	if `mv $arg /root/garbage/`</span><br><span class="line">	then</span><br><span class="line">		echo -e "\033[32m [+]Deleted $arg successfully!\033[0m"</span><br><span class="line">	else</span><br><span class="line">		echo -e "\033[31m [-]Delete $arg failed!\033[0m"</span><br><span class="line">	fi</span><br><span class="line">done</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># 恢复部分（res）</span><br><span class="line">```shell</span><br><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">for arg in "$@"</span><br><span class="line">do</span><br><span class="line">	if `mv /root/garbage/$arg ./$arg`</span><br><span class="line">	then</span><br><span class="line">		echo -e "\033[32m [+]Restored $arg successfully!\033[0m"</span><br><span class="line">	else</span><br><span class="line">		echo -e "\033[31m [-]Restore $arg failed!\033[0m"</span><br><span class="line">	fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><ul>
-<li>root下创建一个garbage目录&lt;位置代码可改&gt;</li>
-<li>ln -s 把bash文件链接到/bin目录下</li>
-<li>chmod 775 给权限给bash文件<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1></li>
-<li><code>del 1 2 3</code> 删除文件 1 2 3</li>
-<li><code>res 1 2 3</code> 恢复文件 1 2 3 到当前目录</li>
-<li><code>del clear</code> 清空回收站<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1></li>
-<li>听别人说好像可以直接修改rm什么什么参数直接实现这个效果。。。</li>
-</ul>
-
-          
+          <h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>使用kali时控制不住手贱使用rm命令，老是误删东西。。。就尝试自己写了一个脚本命令来代替rm命令，个人感觉还是比较好用的</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="删除部分（del）"><a href="#删除部分（del）" class="headerlink" title="删除部分（del）"></a>删除部分（del）</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/14/自写shell脚本代替rm命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
