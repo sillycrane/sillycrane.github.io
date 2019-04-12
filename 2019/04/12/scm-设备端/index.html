@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="SILLYCRANE">
 <meta property="og:description" content="START正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。   4-12-12：40更新process ui设计好了   设备端登录做好了   baidu_api类封装好了 cam类也封装好了（调用摄像头）  problem 早上用base64编码之后存进去，想的是这样做的话就可以直接传编">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T06:03:38.706Z">
+<meta property="og:updated_time" content="2019-04-12T11:25:50.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scm-设备端">
 <meta name="twitter:description" content="START正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。   4-12-12：40更新process ui设计好了   设备端登录做好了   baidu_api类封装好了 cam类也封装好了（调用摄像头）  problem 早上用base64编码之后存进去，想的是这样做的话就可以直接传编">
@@ -379,6 +379,18 @@
 <li>一是百度一手，看看C#怎么调用C++代码  </li>
 <li>二是C++生成EXE可执行文件，传参返回调用</li>
 </ul>
+<h1 id="4-12-19：22更新"><a href="#4-12-19：22更新" class="headerlink" title="4-12-19：22更新"></a>4-12-19：22更新</h1><h2 id="process-2"><a href="#process-2" class="headerlink" title="process"></a>process</h2><ul>
+<li>ui设计好了  </li>
+<li>设备端登录做好了  </li>
+<li>baidu_api类封装好了</li>
+<li>cam类也封装好了（调用摄像头）</li>
+<li>导入课程列表也做好了</li>
+<li>根据课程导出学生也做好了  </li>
+<li>等待虹软的身份认证  <h2 id="problem-2"><a href="#problem-2" class="headerlink" title="problem"></a>problem</h2></li>
+<li>虹软的dll半天加不进去。。。气死人<h2 id="solution-2"><a href="#solution-2" class="headerlink" title="solution"></a>solution</h2></li>
+<li>估计是虹软的sdk绑定了设备的</li>
+<li>玩会游戏冷静一下</li>
+</ul>
 <h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1>
       
     </div>
@@ -555,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#START"><span class="nav-number">1.</span> <span class="nav-text">START</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-12：40更新"><span class="nav-number">2.</span> <span class="nav-text">4-12-12：40更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-number">2.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem"><span class="nav-number">2.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution"><span class="nav-number">2.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-14：00更新"><span class="nav-number">3.</span> <span class="nav-text">4-12-14：00更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process-1"><span class="nav-number">3.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-1"><span class="nav-number">3.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-1"><span class="nav-number">3.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">4.</span> <span class="nav-text">END</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#START"><span class="nav-number">1.</span> <span class="nav-text">START</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-12：40更新"><span class="nav-number">2.</span> <span class="nav-text">4-12-12：40更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-number">2.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem"><span class="nav-number">2.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution"><span class="nav-number">2.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-14：00更新"><span class="nav-number">3.</span> <span class="nav-text">4-12-14：00更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process-1"><span class="nav-number">3.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-1"><span class="nav-number">3.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-1"><span class="nav-number">3.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-19：22更新"><span class="nav-number">4.</span> <span class="nav-text">4-12-19：22更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process-2"><span class="nav-number">4.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-2"><span class="nav-number">4.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-2"><span class="nav-number">4.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">5.</span> <span class="nav-text">END</span></a></li></ol></div>
             
 
           </div>
