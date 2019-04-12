@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="note,markdown," />
+  <meta name="keywords" content="C#,sqlserver," />
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="sillysblog这个下面就没有横线呢sillycrane这个呢，看来大于一个=效果和上面一样呢">
-<meta name="keywords" content="note,markdown">
+<meta name="description" content="START正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。   4-12-12：40更新process ui设计好了   设备端登录做好了   baidu_api类封装好了 cam类也封装好了（调用摄像头）  problem 早上用base64编码之后存进去，想的是这样做的话就可以直接传编">
+<meta name="keywords" content="C#,sqlserver">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown-note">
-<meta property="og:url" content="http://yoursite.com/2018/10/11/markdown-note/index.html">
+<meta property="og:title" content="scm-设备端">
+<meta property="og:url" content="http://yoursite.com/2019/04/12/scm-设备端/index.html">
 <meta property="og:site_name" content="SILLYCRANE">
-<meta property="og:description" content="sillysblog这个下面就没有横线呢sillycrane这个呢，看来大于一个=效果和上面一样呢">
+<meta property="og:description" content="START正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。   4-12-12：40更新process ui设计好了   设备端登录做好了   baidu_api类封装好了 cam类也封装好了（调用摄像头）  problem 早上用base64编码之后存进去，想的是这样做的话就可以直接传编">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png">
-<meta property="og:image" content="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png">
-<meta property="og:updated_time" content="2018-10-11T14:21:18.226Z">
+<meta property="og:updated_time" content="2019-04-12T06:03:38.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown-note">
-<meta name="twitter:description" content="sillysblog这个下面就没有横线呢sillycrane这个呢，看来大于一个=效果和上面一样呢">
-<meta name="twitter:image" content="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png">
+<meta name="twitter:title" content="scm-设备端">
+<meta name="twitter:description" content="START正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。   4-12-12：40更新process ui设计好了   设备端登录做好了   baidu_api类封装好了 cam类也封装好了（调用摄像头）  problem 早上用base64编码之后存进去，想的是这样做的话就可以直接传编">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/11/markdown-note/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/04/12/scm-设备端/"/>
 
 
 
 
 
-  <title>markdown-note | SILLYCRANE</title>
+  <title>scm-设备端 | SILLYCRANE</title>
   
 
 
@@ -266,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/11/markdown-note/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/scm-设备端/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sillycrane">
@@ -283,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">markdown-note</h1>
+          <h1 class="post-title" itemprop="name headline">scm-设备端</h1>
         
 
         <div class="post-meta">
@@ -295,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-11T21:28:37+08:00">
-                2018-10-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-12T12:34:45+08:00">
+                2019-04-12
               </time>
             
 
@@ -318,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/study/" itemprop="url" rel="index">
-                    <span itemprop="name">study</span>
+                  <a href="/categories/scm设计/" itemprop="url" rel="index">
+                    <span itemprop="name">scm设计</span>
                   </a>
                 </span>
 
@@ -355,57 +352,34 @@
       
 
       
-        <h1 id="sillysblog这个下面就没有横线呢"><a href="#sillysblog这个下面就没有横线呢" class="headerlink" title="sillysblog这个下面就没有横线呢"></a>sillysblog这个下面就没有横线呢</h1><h1 id="sillycrane这个呢，看来大于一个-效果和上面一样呢"><a href="#sillycrane这个呢，看来大于一个-效果和上面一样呢" class="headerlink" title="sillycrane这个呢，看来大于一个=效果和上面一样呢"></a>sillycrane这个呢，看来大于一个=效果和上面一样呢</h1><a id="more"></a>
-<h2 id="sillycrane为啥子一个-就没问题，两个-还附送一个横线在下面"><a href="#sillycrane为啥子一个-就没问题，两个-还附送一个横线在下面" class="headerlink" title="sillycrane为啥子一个#就没问题，两个#还附送一个横线在下面"></a>sillycrane为啥子一个#就没问题，两个#还附送一个横线在下面</h2><h3 id="sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别"><a href="#sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别" class="headerlink" title="sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别"></a>sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别</h3><pre><code>开始按个tab键可以让文本换个背景？？
-</code></pre><p>我试试换行呢<br><br>好像后面加上两个空格也可以换行<br>确实可以哈哈</p>
-<p><code>听说这个好像可以高亮，感觉就是代码模式啊，哪里高亮了</code><br><br></p>
-<p><a href="http://1127.74.53.113" title="这里面好像是可以悬停什么东西的" target="_blank" rel="noopener">silly’s blog</a><br><br></p>
-<ul>
-<li>这个好像是什么无序排列的</li>
+        <h1 id="START"><a href="#START" class="headerlink" title="START"></a>START</h1><p>正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。  </p>
+<h1 id="4-12-12：40更新"><a href="#4-12-12：40更新" class="headerlink" title="4-12-12：40更新"></a>4-12-12：40更新</h1><h2 id="process"><a href="#process" class="headerlink" title="process"></a>process</h2><ul>
+<li>ui设计好了  </li>
+<li>设备端登录做好了  </li>
+<li>baidu_api类封装好了</li>
+<li>cam类也封装好了（调用摄像头）</li>
 </ul>
-<ul>
-<li>这个和上面那个效果一样。。。<ul>
-<li>这个好像就是二级的无序<ul>
-<li>这个是三级，有点骚啊</li>
+<h2 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h2><ul>
+<li>早上用base64编码之后存进去，想的是这样做的话就可以直接传编码过去给api比较了，但是一张摄像头拍的照片确实太大了，会让数据库变得特别巨大，base64编码之后也太长了，读取也不方便</li>
+<li>另外就是直接图片单独开一个文件夹，然后直接在数据库存储文件名，文件的话用学生的id来命名  <h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2></li>
+<li>最后还是决定采用第二种方案，牺牲一点灵活性，换取一点容量  </li>
+<li>学生表需要再完善一点</li>
+<li>增加表操作，每个班级单独开一个简单的表  </li>
 </ul>
-</li>
+<h1 id="4-12-14：00更新"><a href="#4-12-14：00更新" class="headerlink" title="4-12-14：00更新"></a>4-12-14：00更新</h1><h2 id="process-1"><a href="#process-1" class="headerlink" title="process"></a>process</h2><ul>
+<li>ui设计好了  </li>
+<li>设备端登录做好了  </li>
+<li>baidu_api类封装好了</li>
+<li>cam类也封装好了（调用摄像头）</li>
+<li>导入课程列表也做好了</li>
+<li>根据课程导出学生也做好了  <h2 id="problem-1"><a href="#problem-1" class="headerlink" title="problem"></a>problem</h2></li>
+<li>调用百度API是在线的识别，需要网络，并且需要3秒左右，时间有点太长了，学姐给我说有个虹软的离线sdk可以提高速度  </li>
+<li>看了看虹软的人脸识别SDK，它支持C/C++，我用的C#。。。难受<h2 id="solution-1"><a href="#solution-1" class="headerlink" title="solution"></a>solution</h2></li>
+<li>两种方案</li>
+<li>一是百度一手，看看C#怎么调用C++代码  </li>
+<li>二是C++生成EXE可执行文件，传参返回调用</li>
 </ul>
-</li>
-</ul>
-<blockquote>
-<p>听说好像这个是一级缩进。。。</p>
-<blockquote>
-<p>这就成二级缩进了。。。</p>
-<blockquote>
-<p>还有三级？</p>
-<blockquote>
-<p>存不存在四级</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><img src="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png" alt="为啥子这里输入的文字看不到呢" title="这里也可以悬停点什么东西在这儿"></p>
-<p><a href="http://112.74.53.113/" target="_blank" rel="noopener"><img src="https://offlintab.firefoxchina.cn/static/img/search/baidu_web.png" alt="外面套一个大圈圈还可以加上链接" title="指向我自己的博客吧"></a></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line"><span class="keyword">echo</span> $_GET[<span class="string">'id'</span>];   </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>这个好像能加粗</strong><br><br><strong>这个好像也能加粗</strong><br><br><em>斜体这个也太斜了吧</em><br><br><em>这个也是斜体</em><br><br><strong><em>这特么就是粗斜体</em></strong><br><br><del>这是删除线</del><br></p>
-<table>
-<thead>
-<tr>
-<th>名字</th>
-<th style="text-align:center">性别</th>
-<th style="text-align:right">年龄</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>王皮</td>
-<td style="text-align:center">男</td>
-<td style="text-align:right">19</td>
-</tr>
-</tbody>
-</table>
-<hr>
-
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1>
       
     </div>
     
@@ -422,9 +396,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/note/" rel="tag"># note</a>
+            <a href="/tags/C/" rel="tag"># C#</a>
           
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
+            <a href="/tags/sqlserver/" rel="tag"># sqlserver</a>
           
         </div>
       
@@ -437,15 +411,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/04/12/4-12-早上随笔/" rel="next" title="4-12-早上随笔">
+                <i class="fa fa-chevron-left"></i> 4-12-早上随笔
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/12/自写小爬虫爬取百度关键词域名/" rel="prev" title="自写小爬虫爬取百度关键词域名">
-                自写小爬虫爬取百度关键词域名 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -581,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sillysblog这个下面就没有横线呢"><span class="nav-number">1.</span> <span class="nav-text">sillysblog这个下面就没有横线呢</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sillycrane这个呢，看来大于一个-效果和上面一样呢"><span class="nav-number">2.</span> <span class="nav-text">sillycrane这个呢，看来大于一个=效果和上面一样呢</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sillycrane为啥子一个-就没问题，两个-还附送一个横线在下面"><span class="nav-number">2.1.</span> <span class="nav-text">sillycrane为啥子一个#就没问题，两个#还附送一个横线在下面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别"><span class="nav-number">2.1.1.</span> <span class="nav-text">sillycrane看来三个也不附送横线呢，还好在浏览器上没有区别</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#START"><span class="nav-number">1.</span> <span class="nav-text">START</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-12：40更新"><span class="nav-number">2.</span> <span class="nav-text">4-12-12：40更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-number">2.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem"><span class="nav-number">2.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution"><span class="nav-number">2.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12-14：00更新"><span class="nav-number">3.</span> <span class="nav-text">4-12-14：00更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#process-1"><span class="nav-number">3.1.</span> <span class="nav-text">process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-1"><span class="nav-number">3.2.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution-1"><span class="nav-number">3.3.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">4.</span> <span class="nav-text">END</span></a></li></ol></div>
             
 
           </div>
