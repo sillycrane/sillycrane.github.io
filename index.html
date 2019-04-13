@@ -351,130 +351,22 @@
 
       
         
-          
-            <h1 id="START"><a href="#START" class="headerlink" title="START"></a>START</h1><ul>
+          <h1 id="START"><a href="#START" class="headerlink" title="START"></a>START</h1><ul>
 <li>这就当个开发记录呗<br>正式开始写这个系列，写这个文章的时候，scm-设备端已经写了一大半了，UI已经设计好了，数据库也差不多了，就是在纠结于图片存入sqlserver用什么方式存。  </li>
 </ul>
 <h1 id="4-12-12：40更新"><a href="#4-12-12：40更新" class="headerlink" title="4-12-12：40更新"></a>4-12-12：40更新</h1><h2 id="process"><a href="#process" class="headerlink" title="process"></a>process</h2><ul>
 <li>ui设计好了  </li>
 <li>设备端登录做好了  </li>
 <li>baidu_api类封装好了</li>
-<li>cam类也封装好了（调用摄像头）</li>
+<li>cam类也封装好了（调用摄像头） </li>
 </ul>
-<h2 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h2><ul>
-<li>早上用base64编码之后存进去，想的是这样做的话就可以直接传编码过去给api比较了，但是一张摄像头拍的照片确实太大了，会让数据库变得特别巨大，base64编码之后也太长了，读取也不方便</li>
-<li>另外就是直接图片单独开一个文件夹，然后直接在数据库存储文件名，文件的话用学生的id来命名  <h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2></li>
-<li>最后还是决定采用第二种方案，牺牲一点灵活性，换取一点容量  </li>
-<li>学生表需要再完善一点</li>
-<li>增加表操作，每个班级单独开一个简单的表  </li>
-</ul>
-<h1 id="4-12-14：00更新"><a href="#4-12-14：00更新" class="headerlink" title="4-12-14：00更新"></a>4-12-14：00更新</h1><h2 id="process-1"><a href="#process-1" class="headerlink" title="process"></a>process</h2><ul>
-<li>ui设计好了  </li>
-<li>设备端登录做好了  </li>
-<li>baidu_api类封装好了</li>
-<li>cam类也封装好了（调用摄像头）</li>
-<li>导入课程列表也做好了</li>
-<li>根据课程导出学生也做好了  <h2 id="problem-1"><a href="#problem-1" class="headerlink" title="problem"></a>problem</h2></li>
-<li>调用百度API是在线的识别，需要网络，并且需要3秒左右，时间有点太长了，学姐给我说有个虹软的离线sdk可以提高速度  </li>
-<li>看了看虹软的人脸识别SDK，它支持C/C++，我用的C#。。。难受<h2 id="solution-1"><a href="#solution-1" class="headerlink" title="solution"></a>solution</h2></li>
-<li>两种方案</li>
-<li>一是百度一手，看看C#怎么调用C++代码（已采用）  </li>
-<li>二是C++生成EXE可执行文件，传参返回调用</li>
-</ul>
-<h1 id="4-12-19：22更新"><a href="#4-12-19：22更新" class="headerlink" title="4-12-19：22更新"></a>4-12-19：22更新</h1><h2 id="process-2"><a href="#process-2" class="headerlink" title="process"></a>process</h2><ul>
-<li>ui设计好了  </li>
-<li>设备端登录做好了  </li>
-<li>baidu_api类封装好了</li>
-<li>cam类也封装好了（调用摄像头）</li>
-<li>导入课程列表也做好了</li>
-<li>根据课程导出学生也做好了  </li>
-<li>等待虹软的身份认证  <h2 id="problem-2"><a href="#problem-2" class="headerlink" title="problem"></a>problem</h2></li>
-<li>虹软的dll半天加不进去。。。气死人<h2 id="solution-2"><a href="#solution-2" class="headerlink" title="solution"></a>solution</h2></li>
-<li>估计是虹软的sdk绑定了设备的</li>
-<li>玩会游戏冷静一下</li>
-</ul>
-<h1 id="4-12-22：29更新"><a href="#4-12-22：29更新" class="headerlink" title="4-12-22：29更新"></a>4-12-22：29更新</h1><h2 id="process-3"><a href="#process-3" class="headerlink" title="process"></a>process</h2><ul>
-<li>ui设计好了  </li>
-<li>设备端登录做好了  </li>
-<li>baidu_api类封装好了</li>
-<li>cam类也封装好了（调用摄像头）</li>
-<li>导入课程列表也做好了</li>
-<li>根据课程导出学生也做好了  </li>
-<li>等待虹软的身份认证  </li>
-<li>成功找到问题调试虹软  <h2 id="problem-3"><a href="#problem-3" class="headerlink" title="problem"></a>problem</h2></li>
-<li>no problem</li>
-<li>尴尬。。。漱口了，一激动咬了个苹果，哇。。。<h2 id="solution-3"><a href="#solution-3" class="headerlink" title="solution"></a>solution</h2></li>
-<li>总算找到哪里出错了  </li>
-<li>成功改对了 </li>
-<li>稳一手，再调试一下</li>
-<li>嗯确定解决了，nice！</li>
-<li>最后得出的原因应该是32位和64位的原因</li>
-<li>所以最后决定开条支路往虹软的方向跑</li>
-</ul>
-<h1 id="4-12-23：24更新"><a href="#4-12-23：24更新" class="headerlink" title="4-12-23：24更新"></a>4-12-23：24更新</h1><h2 id="process-4"><a href="#process-4" class="headerlink" title="process"></a>process</h2><ul>
-<li>完美使用虹软代替百度API<h2 id="problem-4"><a href="#problem-4" class="headerlink" title="problem"></a>problem</h2></li>
-<li>这次才是真的NO PORBLEM了<h2 id="solution-4"><a href="#solution-4" class="headerlink" title="solution"></a>solution</h2></li>
-<li>虹软这个离线的比百度快太多了，并且还不报错，美滋滋</li>
-<li>打个包吧，备份一次，这么多天的劳动成果就怕瞬间爆炸</li>
-</ul>
-<h1 id="4-12-23：36更新"><a href="#4-12-23：36更新" class="headerlink" title="4-12-23：36更新"></a>4-12-23：36更新</h1><h2 id="process-5"><a href="#process-5" class="headerlink" title="process"></a>process</h2><ul>
-<li>设备端收尾<h2 id="problem-5"><a href="#problem-5" class="headerlink" title="problem"></a>problem</h2></li>
-<li>完善这个设备端，今晚到明天左右就收尾吧</li>
-<li>把冗余的百度api相关的删掉  <h2 id="solution-5"><a href="#solution-5" class="headerlink" title="solution"></a>solution</h2></li>
-<li>动手  </li>
-<li>希望今晚就解决  </li>
-</ul>
-<h1 id="4-13-1：44更新"><a href="#4-13-1：44更新" class="headerlink" title="4-13-1：44更新"></a>4-13-1：44更新</h1><h2 id="process-6"><a href="#process-6" class="headerlink" title="process"></a>process</h2><ul>
-<li>设备端功能收尾了，还没做美工</li>
-<li>备份为：scm_设备端_4_13_虹软_功能完善未作美化<h2 id="problem-6"><a href="#problem-6" class="headerlink" title="problem"></a>problem</h2></li>
-<li>写到这么晚还是没有写完，不过也好，只剩下美工了</li>
-<li>留下一个东西就是考虑要不要扩充签到记录在class表里面 <h2 id="solution-6"><a href="#solution-6" class="headerlink" title="solution"></a>solution</h2></li>
-<li>明天一定收官设备端 </li>
-<li>顺便做一手软件测试，把try这些弄完整，然后完工</li>
-</ul>
-<h1 id="4-13-10：47更新"><a href="#4-13-10：47更新" class="headerlink" title="4-13-10：47更新"></a>4-13-10：47更新</h1><h2 id="process-7"><a href="#process-7" class="headerlink" title="process"></a>process</h2><ul>
-<li>走一个分支，试试免学号签到能不能实现<h2 id="problem-7"><a href="#problem-7" class="headerlink" title="problem"></a>problem</h2></li>
-<li>免学号签到能不能实现<h2 id="solution-7"><a href="#solution-7" class="headerlink" title="solution"></a>solution</h2></li>
-<li>遍历呗</li>
-</ul>
-<h1 id="4-13-13：13更新"><a href="#4-13-13：13更新" class="headerlink" title="4-13-13：13更新"></a>4-13-13：13更新</h1><h2 id="problem-8"><a href="#problem-8" class="headerlink" title="problem"></a>problem</h2><ul>
-<li>发现一个bug，班级应该绑定学生的id而不是姓名<h2 id="solution-8"><a href="#solution-8" class="headerlink" title="solution"></a>solution</h2></li>
-<li>更改了一下数据库，写联表查询来解决</li>
-</ul>
-<h1 id="4-13-13：51更新"><a href="#4-13-13：51更新" class="headerlink" title="4-13-13：51更新"></a>4-13-13：51更新</h1><h2 id="重要更新"><a href="#重要更新" class="headerlink" title="重要更新"></a>重要更新</h2><ul>
-<li>重大决定，直接走免学号验证的路线</li>
-<li>保留要学号的路线</li>
-</ul>
-<h1 id="4-13-14：56更新"><a href="#4-13-14：56更新" class="headerlink" title="4-13-14：56更新"></a>4-13-14：56更新</h1><h2 id="更新重要更新"><a href="#更新重要更新" class="headerlink" title="更新重要更新"></a>更新重要更新</h2><h2 id="problem-9"><a href="#problem-9" class="headerlink" title="problem"></a>problem</h2><ul>
-<li>一番思考之后觉得，如果用户人数太多了，人脸文件夹里面有上千个图片的话，一次验证的时间太长了。<h2 id="solution-9"><a href="#solution-9" class="headerlink" title="solution"></a>solution</h2>有3种处理方法</li>
-<li>多线程解决，增加了电脑负担</li>
-<li>班级分文件夹保存人脸，但是会很大增加冗余，会多次存储同一张图片</li>
-<li>采用输入学号的方案，牺牲一点方便性<h2 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h2></li>
-<li>经过思考之后决定还是牺牲一点方便性，采用输入学号的方案  </li>
-<li>原因就是，这个签到系统目的不是为了给学生提供方便，多按几下键盘换取时间和空间，感觉还是赚的  </li>
-<li>保留不要学号的路线  </li>
-</ul>
-<h1 id="4-13-14：56更新-1"><a href="#4-13-14：56更新-1" class="headerlink" title="4-13-14：56更新"></a>4-13-14：56更新</h1><h2 id="process-8"><a href="#process-8" class="headerlink" title="process"></a>process</h2><ul>
-<li>准备写签到数据储存了<h2 id="problem-10"><a href="#problem-10" class="headerlink" title="problem"></a>problem</h2></li>
-<li>如何确定当前课时数  <h2 id="solution-10"><a href="#solution-10" class="headerlink" title="solution"></a>solution</h2></li>
-<li>给班级添加一个新的列当前课时参数</li>
-</ul>
-<h1 id="4-13-16：53加急更新"><a href="#4-13-16：53加急更新" class="headerlink" title="4-13-16：53加急更新"></a>4-13-16：53加急更新</h1><h2 id="process-9"><a href="#process-9" class="headerlink" title="process"></a>process</h2><ul>
-<li>基本都准备收尾这个设备端了<h2 id="problem-11"><a href="#problem-11" class="headerlink" title="problem"></a>problem</h2></li>
-<li>一问老师，还是不要输入学号好</li>
-<li>用户体验更重要</li>
-<li>感谢老师提点，才想起班级是储存了每个学生的学号，根据学号去筛选人脸照片就可以把对比次数控制在100以内了<h2 id="solution-11"><a href="#solution-11" class="headerlink" title="solution"></a>solution</h2></li>
-<li>还好打了备份，把这个功能改回去也不会很麻烦</li>
-</ul>
-<h1 id="4-13-20：58更新"><a href="#4-13-20：58更新" class="headerlink" title="4-13-20：58更新"></a>4-13-20：58更新</h1><h2 id="process-10"><a href="#process-10" class="headerlink" title="process"></a>process</h2><ul>
-<li>上传数据也写好了</li>
-<li>功能终于完美了<h2 id="problem-12"><a href="#problem-12" class="headerlink" title="problem"></a>problem</h2></li>
-<li>差点美工<h2 id="solution-12"><a href="#solution-12" class="headerlink" title="solution"></a>solution</h2></li>
-<li>洗个澡回来彻底收尾</li>
-<li>绝对收尾！！！！绝对！！！</li>
-</ul>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/12/scm-设备端/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
